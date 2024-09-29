@@ -24,8 +24,32 @@ The repository includes a Python script `main.py` with a function `double_number
 
 * `README.md`: Documentation (this file).
 
-## Result
+## Setup and Workflow
 
-Navigate to the *Actions* page or click on the *CI badge* to view results.
+1. **Codespaces Setup**
+   - Open in Codespaces and wait for the container to build.
+   - The virtual environment will automatically activate and install dependencies from `requirements.txt`.
 
-![result](test_result.png)
+2. **Development Workflow**
+   - Make changes to `main.py` or `test_main.py` as necessary.
+   - Push changes to GitHub, and GitHub Actions will automatically run the tests in multiple environments and operating systems.
+
+3. **Code Formatting and Testing**
+   - To format code: `make format`
+   - To lint code: `make lint`
+   - Example of lint errors:
+
+     ![Lint errors](lint_errors.jpg)
+
+   - To run tests: `make test`
+   - Example of test cases:
+
+     ![Test cases](test_cases.jpg)
+
+## Github actions with matrix strategy 
+
+![Jobs](Jobs.jpg)
+
+## References
+
+https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
